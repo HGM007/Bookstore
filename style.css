@@ -1,0 +1,336 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 50px;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 10 px 34px;
+    font-style: oblique;
+}
+#logo div{
+    text-align: center;
+    color: rgb(20, 0, 71);
+}
+
+#logo img {
+    height: 59px;
+    margin: 3px 6px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -10px;
+    /* padding: 10px; */
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar::before {
+    content: "";
+    background-color: rgb(177, 197, 197);
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    top: 0px;
+    left: 0px;
+
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: rgb(255, 1, 1);
+    display: block;
+    padding: 3px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#navbar ul li a:hover {
+    color: blue;
+    background-color: blanchedalmond;
+
+}
+.search-container {
+    float: right;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: 20px;
+  }
+  
+.search-container input {
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 15px;
+    border-radius: 10px;
+    
+    /* margin: auto; */
+  }
+  
+.search-container button {
+    float: right;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 16px;
+    /* background: #ae9f9f; */
+    font-size: 15px;
+    /* border: none; */
+    cursor: pointer;
+  }
+  
+.search-container button:hover {
+    background: #7f7373;
+  }
+.right {
+    display: inline-block;
+    position: absolute;
+
+    right: 34px;
+    top: 30px;
+    /* border: 2px solid green; */
+}
+.right button{
+    color: rgb(209, 9, 9);
+    background-color:  rgb(177, 197, 197);
+    padding: 6px 10px;
+    font-size: 20px;
+    margin: 12px;
+    
+}
+.btn:hover{
+    background-color: azure;
+}
+
+/* home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 585px;
+}
+
+#home::before {
+    content: "";
+    /* background: url('img/bg21.jpg') no-repeat center center/cover; */
+    background: url('img/book\ _bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 710px;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.9;
+    top: 0px;
+    left: 0px;
+
+}
+
+#home h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-shadow:10px 10px 10px rgb(202, 196, 196);
+
+}
+
+#home p {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 0, 0);
+    text-shadow:10px 10px 10px rgb(188, 125, 30);
+}
+
+/* utility classes */
+.h-primary {
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid black;
+    background-color: rgb(228, 246, 138);
+    border-radius: 10px;
+    color: rgb(251, 72, 227);
+    font-size: 1.5rem;
+    margin: 17px;
+    cursor: pointer;
+}
+
+/* Services Section */
+#services-container::before{
+    background: url("img/bg21.jpg");
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 380px;
+    z-index: -1;
+    opacity: 0.4;
+
+}
+#services {
+    margin: 20px;
+    display: flex;
+}
+
+#services-container h1 {
+    text-align: center;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 25px ;
+    border-radius: 20px;
+    background: #d8caca;
+    margin-bottom: 20px;
+    height: 180px;
+    width: 130px;
+
+}
+
+#services .box img {
+    height: 180px;
+    width: 150px;
+    margin: -10px 10px 0px -10px;
+    display: block;
+    
+}
+#services .box h2{
+    margin-top: 15px;
+    font-size: 17px;
+    text-align: center;
+}
+#services .box p {
+
+    font-family: 'Bree Serif', serif;
+}
+
+/* client section */
+#client {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#client-section {
+    height: 300px;
+    /* text-align: center; */
+    position: relative;
+
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('img/book_1.jpg');
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.4;
+
+}
+
+#client-section h1 {
+    text-align: center;
+    padding: 5px;
+}
+
+#client-section p{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#client img {
+    height: 180px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.client-item {
+    
+    padding: 18px;
+}
+
+/* contact section */
+
+#contact {
+    position: relative;
+    text-align: center;
+    background: url("img/contact.jpg");
+    height: 590px;
+}
+
+/* #contact{
+    text-align: center;
+} */
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    /* opacity: 0.9; */
+    z-index: -2;
+    background-color: aliceblue;
+    border-color: aqua;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+ 
+ }
+#contact-box form {
+    width: 35%;
+}
+
+
+/* footer */
+footer {
+    background: black;
+    color: white;
+    padding: 70px 0px 10px 0px;
+    text-align: center;
+   
+    
+}

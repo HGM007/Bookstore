@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Calculator</title>
+</head>
+<style>
+    body{
+        background:url("img/cc.jpg");
+    }
+    p{
+        font-size: x-large;
+        font-style: italic;
+        font-weight: bold;
+    }
+    h1{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    label{
+        font-size: x-large;
+
+    }
+    option{
+        font-size: x-large;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 7px;
+    }
+    button{
+        border-radius: 10px;
+        padding: 8px;
+        border-color: crimson;
+
+    }
+    input{
+        border-radius: 10px;
+        padding: 8px;
+        border-color: aqua;
+    }
+</style>
+<center>
+    <body> 
+        <h1>Currency Converter</h1>
+       <p> Select Currency and enter Amount to convert.</p>
+       <form>
+          <label>From:</label>
+          <select id="from">
+             <option value="USD">USD</option>
+             <option value="EUR">EUR</option>
+             <option value="GBP">GBP</option>
+             <option value="INR">INR</option>
+          </select>
+          <label>To:</label>
+          <select id="to">
+             <option value="USD">USD</option>
+             <option value="EUR">EUR</option>
+             <option value="GBP">GBP</option>
+             <option value="INR">INR</option>
+          </select>
+          <label>Amount:</label>
+          <input type="text" id="amount" />
+          <button type="button" id="convert">Convert</button>
+          <p id="result"></p>
+       </form>
+       <script>
+          const convert = document.getElementById("convert");
+          const result = document.getElementById("result");
+          const from = document.getElementById("from");
+          const to = document.getElementById("to");
+          const amount = document.getElementById("amount");
+          convert.addEventListener("click", function() {
+             let fromCurrency = from.value;
+             let toCurrency = to.value;
+             let amt = amount.value;
+             fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+             .then(response => {
+                   return response.json();
+             })
+             .then(data => {
+                let rate = data.rates[toCurrency];
+                let total = rate * amt;
+                result.innerHTML = `${amt} ${fromCurrency} = ${total}
+                ${toCurrency}`;
+             });
+          });
+       </script>
+    </html>
+    </body>
+</center>
+
+</html>
+
+
+
+
+
+   
