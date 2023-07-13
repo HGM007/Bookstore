@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    input[type="button"]
+    {
+        border-radius: 8px;
+        border-color: black;
+        color: rgb(22, 15, 7);
+        background-color: rgb(219, 143, 21);
+        width: 100%;
+        padding: 9px ;
+    }
+    input[type="button"]:hover{
+        background-color: yellow;
+    }
+    input[type="text"]
+    {
+        border-radius: 8px;
+        border-color: burlywood;
+        color: rgb(255, 64, 0);
+    }
+    #display{
+        padding: 15px;
+    }
+</style>
+<script>
+    function data(x){
+        document.getElementById('display').value+=x;        //x+=1=x+1
+    }
+    function clr(){
+        document.getElementById('display').value="";
+    }
+    function calc(){
+       var x = document.getElementById('display').value 
+       document.getElementById('display').value = eval(x);
+    }
+</script>
+<button type="button">&larr;<a href="bookstore.html">Back</a></button>
+<center>
+<body>
+    <h1>Calculator</h1>
+    <table>
+        
+        <tr>
+            <td>
+                <input type="button" value="C" onclick="clr('')">
+            </td> 
+            <td colspan="3">
+                <input type="text" id="display">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="+" onclick="data('+')">
+            </td> 
+            <td>
+                <input type="button" value="1" onclick="data(1)">
+            </td>
+            <td>
+                <input type="button" value="2"onclick="data(2)">
+            </td>
+            <td>
+                <input type="button" value="3"onclick="data(3)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="-"onclick="data('-')">
+            </td> 
+            <td>
+                <input type="button" value="4"onclick="data(4)">
+            </td>
+            <td>
+                <input type="button" value="5"onclick="data(5)">
+            </td>
+            <td>
+                <input type="button" value="6"onclick="data(6)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="*"onclick="data('*')">
+            </td> 
+            <td>
+                <input type="button" value="7"onclick="data(7)">
+            </td>
+            <td>
+                <input type="button" value="8"onclick="data(8)">
+            </td>
+            <td>
+                <input type="button" value="9"onclick="data(9)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="button" value="/"onclick="data('/)">
+            </td> 
+            <td>
+                <input type="button" value="."onclick="data('.')">
+            </td>
+            <td>
+                <input type="button" value="0"onclick="data(0)">
+            </td>
+            <td>
+                <input type="button" value="="onclick="calc('')">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</center>
+</html>
